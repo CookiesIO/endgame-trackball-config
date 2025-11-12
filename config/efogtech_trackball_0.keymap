@@ -20,7 +20,7 @@
 #define LAYER_USER 5
 
 #define SCROLL_MULTIPLIER 1
-#define SCROLL_DIVISOR 3
+#define SCROLL_DIVISOR 1
 
 #define SNIPE_MULTIPLIER 1
 #define SNIPE_DIVISOR 4
@@ -30,7 +30,7 @@
     track-remainders;
     min-factor = <50>;
     max-factor = <2500>;
-    speed-threshold = <100>;
+    speed-threshold = <300>;
     speed-max = <3000>;
     acceleration-exponent = <4>;
 };
@@ -131,7 +131,7 @@
 
 		scroll {
 			layers = <LAYER_SCROLL>;
-			input-processors = <&zip_xy_scaler SCROLL_MULTIPLIER SCROLL_DIVISOR>, <&zip_axis_clamper>,
+			input-processors = <&pointer_accel>, <&zip_axis_clamper>,
 							   <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 		};
 
