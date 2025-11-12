@@ -9,6 +9,8 @@
 #include <behaviors/p2sm_behaviors.dtsi>
 #include <behaviors/rate_limit.dtsi>
 #include <behaviors/auto_hold.dtsi>
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 
 #define LAYER_DEFAULT 0
 #define LAYER_EXTRAS 1
@@ -22,6 +24,16 @@
 
 #define SNIPE_MULTIPLIER 1
 #define SNIPE_DIVISOR 4
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+    min-factor = <500>;
+    max-factor = <3000>;
+    speed-threshold = <800>;
+    speed-max = <3250>;
+    acceleration-exponent = <3>;
+};
 
 / {
 	keymap {
@@ -115,6 +127,8 @@
 	};
 
 	trackball {
+		input-processors = <&pointer_accel>;
+
 		scroll {
 			layers = <LAYER_SCROLL>;
 			input-processors = <&zip_xy_scaler SCROLL_MULTIPLIER SCROLL_DIVISOR>, <&zip_axis_clamper>,
