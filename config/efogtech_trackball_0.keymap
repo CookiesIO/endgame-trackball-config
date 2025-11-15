@@ -27,9 +27,9 @@
 
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
-    track-remainders;
+    // track-remainders;
     min-factor = <1>;
-    max-factor = <4500>;
+    max-factor = <2000>;
     speed-threshold = <5000>;
     speed-max = <20000>;
     acceleration-exponent = <2>;
