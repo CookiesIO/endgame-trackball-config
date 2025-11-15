@@ -127,11 +127,11 @@
 	};
 
 	trackball {
-		input-processors = <&pointer_accel>;
+		input-processors = <&pointer_accel>, <&zip_y_scaler 2 3>;
 
 		scroll {
 			layers = <LAYER_SCROLL>;
-			input-processors = <&pointer_accel>, <&zip_axis_clamper>,
+			input-processors = <&pointer_accel>, <&zip_y_scaler 2 3>, <&zip_axis_clamper>,
 							   <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 		};
 
