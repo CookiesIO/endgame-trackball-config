@@ -155,7 +155,7 @@
 
 		scrlsens: p2sm_scroll_sensitivity {
 			feedback-duration = <65>;
-			step = <4>;
+			step = <1>;
 			min-step = <1>;
 			max-step = <12>;
 		};
