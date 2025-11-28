@@ -101,8 +101,8 @@
 			display-name = "Snipe";
 			DECLARE_ENCODERS;
 			bindings = <
-				&p2sm_twist_toggle  &soft_off
-				&trans           	&trans
+				&trans				&soft_off
+				&p2sm_twist_toggle  &trans
 				&trans           	&trans
 				&trans           	&trans
 
