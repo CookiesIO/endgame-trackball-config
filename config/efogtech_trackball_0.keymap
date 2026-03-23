@@ -150,7 +150,7 @@
 
 	trackball {
 		input-processors = <&zip_scroll_scaler TWIST_MULTIPLIER TWIST_DIVISOR>,
-						   <&zip_pointer_accel>, <&zip_scroll_accel>,
+						   <&pointer_accel>, <&zip_scroll_accel>,
 						   <&zip_rotate_pointer>, <&zip_rotate_scroll>,
 						   <&zip_y_scaler Y_MULTIPLIER Y_DIVISOR>,
 		                   <&zip_ble_report_rate_limit>;
